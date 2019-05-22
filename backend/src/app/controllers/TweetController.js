@@ -1,9 +1,9 @@
 const Tweet = require("../models/Tweet");
 
 class TweetController {
-  async index() {
+  async index(req, res) {
     const tweets = await Tweet.find({});
-    return tweets;
+        return res.json(tweets);
   }
 
   async show(req, res) {
